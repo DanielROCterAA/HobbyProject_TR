@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq22gl64gvdm1"]
+
+[ext_resource type="ArrayMesh" uid="uid://c6gnrym2ouj1u" path="res://Assets/CharaterModelOne.obj" id="1_ebrye"]
+[ext_resource type="Script" path="res://Scripts/PlayerControls.gd" id="1_t5odm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bw0x2"]
+
+[node name="PlayerCharater" type="CharacterBody3D"]
+script = ExtResource("1_t5odm")
+
+[node name="Body-Collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_bw0x2")
+
+[node name="CharacterBody" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ebrye")

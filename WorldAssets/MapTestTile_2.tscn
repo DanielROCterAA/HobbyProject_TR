@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://chql85o0vxbd6"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xqxqy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gfpm6"]
+size = Vector3(8, 0.01, 6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_guol6"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_c3mms"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qcjk"]
+size = Vector3(8, 5, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody_Floor" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="StaticBody_Floor"]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("PlaneMesh_xqxqy")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody_Floor"]
+shape = SubResource("BoxShape3D_gfpm6")
+
+[node name="RigidBody_testProp" type="RigidBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody_testProp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
+shape = SubResource("BoxShape3D_guol6")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody_testProp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
+mesh = SubResource("PrismMesh_c3mms")
+skeleton = NodePath("../..")
+
+[node name="StaticBody_invisWallFront" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11401, 3.42794)
+
+[node name="CollisionShape_WallFront" type="CollisionShape3D" parent="StaticBody_invisWallFront"]
+shape = SubResource("BoxShape3D_2qcjk")
+
+[node name="StaticBody_invisWallBack" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11401, -3.44862)
+
+[node name="CollisionShape_WallBack" type="CollisionShape3D" parent="StaticBody_invisWallBack"]
+shape = SubResource("BoxShape3D_2qcjk")
