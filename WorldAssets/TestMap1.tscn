@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://elpvk3pxgilh"]
+
+[ext_resource type="PackedScene" uid="uid://c7sgbxvb2f43w" path="res://Assets/TestMap1.fbx" id="1_7s42c"]
+
+[node name="Root Scene" instance=ExtResource("1_7s42c")]
+
+[node name="Cube" parent="RootNode" index="0"]
+transform = Transform3D(250, 0, 0, 0, -1.09278e-05, 250, 0, -250, -1.09278e-05, 0.0352902, 1.4506, 0.838396)
+
+[node name="lighting" parent="RootNode" index="1"]
+light_energy = 2.0

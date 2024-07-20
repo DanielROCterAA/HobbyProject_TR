@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=3 uid="uid://bx86jpy2nfeyf"]
+
+[ext_resource type="Texture2D" uid="uid://dbf4ju8c8yop4" path="res://Images/MenuBackGroundTemp.png" id="1_ikqfm"]
+
+[sub_resource type="SystemFont" id="SystemFont_c38hm"]
+font_names = PackedStringArray("Impact")
+
+[sub_resource type="SystemFont" id="SystemFont_y8tcm"]
+font_names = PackedStringArray("Impact")
+font_italic = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtbyg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1h8r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04uol"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1rjc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2324"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_evq4e"]
+Button/colors/font_color = Color(0.659564, 0.437092, 0.927147, 1)
+Button/colors/font_focus_color = Color(0.969137, 0.969137, 0.969137, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = SubResource("SystemFont_y8tcm")
+Button/styles/disabled = SubResource("StyleBoxFlat_vtbyg")
+Button/styles/focus = SubResource("StyleBoxFlat_x1h8r")
+Button/styles/hover = SubResource("StyleBoxFlat_04uol")
+Button/styles/normal = SubResource("StyleBoxFlat_w1rjc")
+Button/styles/pressed = SubResource("StyleBoxFlat_a2324")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+auto_translate = false
+texture = ExtResource("1_ikqfm")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 2
+offset_left = 11.0
+offset_top = 500.0
+offset_right = 382.0
+offset_bottom = 617.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = SubResource("SystemFont_c38hm")
+theme_override_font_sizes/font_size = 64
+text = "Taimanin : Rinko"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -426.0
+offset_top = -207.0
+offset_right = -18.0
+offset_bottom = -11.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_evq4e")
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="BtnNewGame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "New Game
+"
+
+[node name="BtnLoad" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Load"
+
+[node name="BtnOptions" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Options
+"
+
+[node name="BtnExtraContent" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Extra
+"
+
+[node name="BtnQuit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "Quit
+"
