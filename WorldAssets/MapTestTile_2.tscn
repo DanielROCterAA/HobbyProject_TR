@@ -5,12 +5,13 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_gfpm6"]
 size = Vector3(8, 0.01, 6)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_guol6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qcjk"]
+size = Vector3(8, 5, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_c3mms"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2qcjk"]
-size = Vector3(8, 5, 1)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1cxtq"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.0146517, 0.470697, 0.470697, 0.0735213, 0.352957, 0.47061, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.0146517, 0.470697, -0.470697, 0.5, -0.5, 0.5, -0.0146517, 0.470697, 0.470697, 0.0146517, 0.470697, -0.470697)
 
 [node name="Node3D" type="Node3D"]
 
@@ -24,17 +25,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody_Floor"]
 shape = SubResource("BoxShape3D_gfpm6")
 
-[node name="RigidBody_testProp" type="RigidBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody_testProp"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
-shape = SubResource("BoxShape3D_guol6")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody_testProp"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
-mesh = SubResource("PrismMesh_c3mms")
-skeleton = NodePath("../..")
-
 [node name="StaticBody_invisWallFront" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11401, 3.42794)
 
@@ -46,3 +36,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.11401, -3.44862)
 
 [node name="CollisionShape_WallBack" type="CollisionShape3D" parent="StaticBody_invisWallBack"]
 shape = SubResource("BoxShape3D_2qcjk")
+
+[node name="RigidBody_testProp" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.824032, 0)
+mass = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody_testProp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
+mesh = SubResource("PrismMesh_c3mms")
+skeleton = NodePath("../..")
+
+[node name="@CollisionShape3D@79564" type="CollisionShape3D" parent="RigidBody_testProp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.516492, 0)
+shape = SubResource("ConvexPolygonShape3D_1cxtq")

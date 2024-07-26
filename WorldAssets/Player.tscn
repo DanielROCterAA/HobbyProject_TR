@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bq22gl64gvdm1"]
 
-[ext_resource type="ArrayMesh" uid="uid://c6gnrym2ouj1u" path="res://Assets/CharaterModelOne.obj" id="1_ebrye"]
 [ext_resource type="Script" path="res://Scripts/PlayerControls.gd" id="1_t5odm"]
+[ext_resource type="PackedScene" uid="uid://vphppaqfswbh" path="res://Assets/RinkoNoAni/CharaterModelTwo.fbx" id="2_klj8a"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bw0x2"]
 
@@ -12,5 +12,5 @@ script = ExtResource("1_t5odm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 shape = SubResource("CapsuleShape3D_bw0x2")
 
-[node name="CharacterBody" type="MeshInstance3D" parent="."]
-mesh = ExtResource("1_ebrye")
+[node name="Root Scene" parent="." instance=ExtResource("2_klj8a")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
