@@ -7,7 +7,8 @@ size = Vector3(2, 0.5, 2)
 
 [sub_resource type="PrismMesh" id="PrismMesh_5eyit"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_d8cjq"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w5j4w"]
+data = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, -0.5, 0, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkg7p"]
 
@@ -38,16 +39,15 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody_Cube"]
 shape = SubResource("BoxShape3D_y51uh")
 
-[node name="StaticBody_pyrimid" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.04776, 0.237324, 1.80801)
-
-[node name="Obstical_2" type="MeshInstance3D" parent="StaticBody_pyrimid"]
-transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
+[node name="Obstical_2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 2.11574, 0.237324, 1.80801)
 mesh = SubResource("PrismMesh_5eyit")
-skeleton = NodePath("../../..")
+skeleton = NodePath("../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody_pyrimid"]
-shape = SubResource("ConvexPolygonShape3D_d8cjq")
+[node name="StaticBody_pyrimid" type="StaticBody3D" parent="Obstical_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Obstical_2/StaticBody_pyrimid"]
+shape = SubResource("ConcavePolygonShape3D_w5j4w")
 
 [node name="StaticBody" type="StaticBody3D" parent="."]
 
@@ -76,7 +76,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.247148, 1, 1.07443)
 
 [node name="Obstical_4" type="MeshInstance3D" parent="RigidBody_ball"]
 mesh = SubResource("SphereMesh_jbte1")
-skeleton = NodePath("../../StaticBody_pyrimid/Obstical_2")
+skeleton = NodePath("../../Obstical_2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody_ball"]
 shape = SubResource("SphereShape3D_i72yt")
