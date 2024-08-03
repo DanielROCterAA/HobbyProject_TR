@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwyoi6cufymfk"]
+
+[ext_resource type="PackedScene" uid="uid://b55rljt1gchce" path="res://Assets/FinalCharacterAni/RinkoCharacterAnimations.glb" id="1_xt2vi"]
+
+[node name="RinkoCharacterAnimations" instance=ExtResource("1_xt2vi")]
+
+[node name="FaceRinko" parent="SkeletonRinko/Skeleton3D" index="0"]
+transform = Transform3D(1, -2.09548e-09, 3.57628e-07, -1.18511e-07, 1, -7.67293e-07, -3.8743e-07, 8.43254e-07, 0.999999, 1.93163e-07, 1.19209e-07, -6.41448e-08)
