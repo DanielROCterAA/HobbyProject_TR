@@ -5,22 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://chql85o0vxbd6" path="res://WorldAssets/MapTestTile_2.tscn" id="3_oh7hq"]
 [ext_resource type="PackedScene" uid="uid://elpvk3pxgilh" path="res://WorldAssets/TestMap1.tscn" id="5_7iuh2"]
 [ext_resource type="PackedScene" uid="uid://cwr3knph0r46t" path="res://WorldAssets/Player_shiranui.tscn" id="5_fgkfu"]
-
-[sub_resource type="Environment" id="Environment_wp8m2"]
+[ext_resource type="PackedScene" uid="uid://47ogv4nf5vae" path="res://WorldAssets/BR_warehouse.tscn" id="6_f0pqt"]
 
 [node name="Main_World" type="Node3D"]
-
-[node name="Camara" parent="." instance=ExtResource("1_lityf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2461, 4.89394, 7.78348)
 
 [node name="MapTile One" parent="." instance=ExtResource("2_oq7ko")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
 [node name="Maptile Two" parent="." instance=ExtResource("3_oh7hq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_wp8m2")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.0150036, -0.999856, -0.00788074, 0.106487, -0.00943461, 0.994269, -0.994201, 0.0140784, 0.106613, 12.0973, 3.05459, 4.12248)
@@ -29,4 +22,10 @@ transform = Transform3D(-0.0150036, -0.999856, -0.00788074, 0.106487, -0.0094346
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 57.5486, -1, -3.29828)
 
 [node name="ShiranuiAniTestUNit" parent="." instance=ExtResource("5_fgkfu")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 43.9107, 1.19943, 0)
+transform = Transform3D(1.99999, 0.00617681, -0.00200211, -0.00617776, 1.99999, -0.000947708, 0.00199918, 0.000953866, 2, 135.553, 0.283353, 0)
+
+[node name="Camara" parent="ShiranuiAniTestUNit" instance=ExtResource("1_lityf")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.306717, 0.890633, 4.29408)
+
+[node name="BR_Warehouse_3" parent="." instance=ExtResource("6_f0pqt")]
+transform = Transform3D(-2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 113.995, 0, 0)
