@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://cub300oy4dey3"]
 
-[ext_resource type="PackedScene" uid="uid://dxdpo0ug4eyj" path="res://Assets/ShiraToonTest_2.glb" id="1_ekrgl"]
-[ext_resource type="Texture2D" uid="uid://d2bmfrs1h4307" path="res://Assets/ShiraToonTest_2_tex_costume_shiranui_body_normal_Blue.png" id="2_8qjc3"]
-[ext_resource type="Texture2D" uid="uid://cy6v66jvbefcl" path="res://Assets/tex_shiranui_hair_normal_Blue.png" id="3_4qpbk"]
+[ext_resource type="PackedScene" uid="uid://dxdpo0ug4eyj" path="res://Assets/TestFolder/ToonShader/ShiraToonTest_2.glb" id="1_ekrgl"]
+[ext_resource type="Texture2D" uid="uid://d2bmfrs1h4307" path="res://Assets/TestFolder/ToonShader/ShiraToonTest_2_tex_costume_shiranui_body_normal_Blue.png" id="2_8qjc3"]
+[ext_resource type="Texture2D" uid="uid://cy6v66jvbefcl" path="res://Assets/TestFolder/ToonShader/tex_shiranui_hair_normal_Blue.png" id="3_4qpbk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xw456"]
 diffuse_mode = 3
