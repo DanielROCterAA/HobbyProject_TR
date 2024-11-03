@@ -3,4 +3,4 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.878192, 0.478309, 0, -0.478309, 0.878192, 0, 3.04301, 5.71857)
+transform = Transform3D(1, 0, 0, 0, 0.938728, 0.344659, 0, -0.344659, 0.938728, 0, 3.04301, 5.71857)

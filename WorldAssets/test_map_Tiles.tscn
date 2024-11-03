@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://usxp5dbpg88m"]
+
+[ext_resource type="MeshLibrary" uid="uid://cfqmeuwcqrweu" path="res://MapTiles/HallwayMapTile.tres" id="1_4au2i"]
+[ext_resource type="Script" path="res://Scripts/TestMapGenirator.gd" id="2_r5pdo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3qrdk"]
+
+[node name="TestMap" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh_library = ExtResource("1_4au2i")
+cell_size = Vector3(8.305, 1, 10.4)
+cell_center_y = false
+script = ExtResource("2_r5pdo")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.642788, -0.383022, 0.663414, 0, 0.866025, 0.5, -0.766044, -0.321394, 0.55667, 0, 147.76, 219.209)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_3qrdk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 69, 0)
