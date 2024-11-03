@@ -14,7 +14,6 @@ transform = Transform3D(-1.09278e-05, 250, 1.09278e-05, 0, -1.09278e-05, 250, 25
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/Cube/StaticBody3D" index="0"]
 transform = Transform3D(1, -3.55271e-15, 0, 3.55271e-15, 1, 8.35187e-23, 0, 8.35187e-23, 1, 0, 0, 0)
-visible = false
 shape = SubResource("ConcavePolygonShape3D_7wfiq")
 
 [node name="lighting" parent="RootNode" index="1"]
