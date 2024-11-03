@@ -7,6 +7,7 @@ var Hallway_Length = 8.305
 #000 is temp but should be the exit location of the start map
 var Start_Pos = Vector3(0,0,0)
 
+
 func _ready() -> void:
 	Generate_Hallways()
 	pass 
